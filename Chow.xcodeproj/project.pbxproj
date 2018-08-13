@@ -54,14 +54,22 @@
 		934D1B6E21222E6F00356C61 /* Chow */ = {
 			isa = PBXGroup;
 			children = (
-				934D1B6F21222E6F00356C61 /* AppDelegate.swift */,
+				934D1B81212235CB00356C61 /* Supporting Files */,
 				934D1B7121222E6F00356C61 /* ViewController.swift */,
 				934D1B7321222E6F00356C61 /* Main.storyboard */,
 				934D1B7621222E7100356C61 /* Assets.xcassets */,
+			);
+			path = Chow;
+			sourceTree = "<group>";
+		};
+		934D1B81212235CB00356C61 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				934D1B6F21222E6F00356C61 /* AppDelegate.swift */,
 				934D1B7821222E7100356C61 /* LaunchScreen.storyboard */,
 				934D1B7B21222E7100356C61 /* Info.plist */,
 			);
-			path = Chow;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
