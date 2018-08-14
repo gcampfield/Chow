@@ -16,7 +16,7 @@ class SwipeView: UIView {
     private var tapGestureRecognizer: UITapGestureRecognizer?
     
     var bufferMultiplier: CGFloat = 0.5
-    var rotationMultiplier: CGFloat = 4.0
+    var rotationMultiplier: CGFloat = 0.25
     
     // MARK: - Setup
     
@@ -30,7 +30,7 @@ class SwipeView: UIView {
         initGestureRecognizers()
     }
     
-    // Repove the gesture recognizers when remiving the object
+    // Remove the gesture recognizers when remiving the object
     deinit {
         if let panGestureRecognizer = panGestureRecognizer {
             removeGestureRecognizer(panGestureRecognizer)
@@ -66,14 +66,14 @@ class SwipeView: UIView {
         case .ended:
             let direction = SwipeDirection.closestTo(translation, withBuffer: view.frame.width * bufferMultiplier)
             delegate?.didEndSwipe(on: self, in: direction)
-        default:
             // TODO: animate reset
             self.transform = .identity
+        default: return
         }
     }
     
     private func tilt(view: UIView, for translation: CGPoint) -> CGAffineTransform {
-        let moved = CGAffineTransform(translationX: translation.x, y: 0.0)
+        let moved = CGAffineTransform(translationX: translation.x, y: translation.y)
         let rotation = sin(translation.x / view.frame.width * rotationMultiplier)
         return moved.rotated(by: rotation)
     }
