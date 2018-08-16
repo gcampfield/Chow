@@ -63,11 +63,17 @@ class SwipeView: UIView {
             delegate?.didBeginSwipe(on: self)
         case .changed:
             view.transform = tilt(view: view, for: translation)
+            delegate?.didChangeSwipe(on: self, with: translation)
         case .ended:
             let direction = SwipeDirection.closestTo(translation, withBuffer: view.frame.width * bufferMultiplier)
             delegate?.didEndSwipe(on: self, in: direction)
-            // TODO: animate reset
-            self.transform = .identity
+            UIView.animate(withDuration: 0.5,
+                           delay: 0.0,
+                           usingSpringWithDamping: 0.75,
+                           initialSpringVelocity: 1.0,
+                           options: [],
+                           animations: { view.transform = .identity },
+                           completion: nil)
         default: return
         }
     }

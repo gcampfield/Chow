@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 protocol SwipeViewDelegate: class {
     
@@ -14,6 +15,8 @@ protocol SwipeViewDelegate: class {
     
     func didBeginSwipe(on view: SwipeView)
     
+    func didChangeSwipe(on view: SwipeView, with translation: CGPoint)
+
     func didEndSwipe(on view: SwipeView, in direction: SwipeDirection?)
     
 }
