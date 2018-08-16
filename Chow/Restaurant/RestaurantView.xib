@@ -12,18 +12,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RestaurantView" customModule="Chow" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qsp-pg-kv9" userLabel="Background Image">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                 </imageView>
-                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYb-8S-53x" userLabel="Detail View" customClass="GradientView" customModule="Chow" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="372.5" width="375" height="190.5"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYb-8S-53x" userLabel="Detail View" customClass="GradientView" customModule="Chow" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="356.5" width="375" height="206.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBh-ao-Dvb" userLabel="Title Label">
-                            <rect key="frame" x="8" y="108" width="359" height="38.5"/>
+                            <rect key="frame" x="16" y="116" width="343" height="38.5"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                             </accessibility>
@@ -32,7 +32,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRh-39-r18" userLabel="Subtitle Label">
-                            <rect key="frame" x="8" y="154.5" width="359" height="28"/>
+                            <rect key="frame" x="16" y="162.5" width="343" height="28"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                             </accessibility>
@@ -46,13 +46,13 @@
                         <accessibilityTraits key="traits" notEnabled="YES"/>
                     </accessibility>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="cRh-39-r18" secondAttribute="trailing" constant="8" id="29b-5m-5Gd"/>
+                        <constraint firstAttribute="trailing" secondItem="cRh-39-r18" secondAttribute="trailing" constant="16" id="29b-5m-5Gd"/>
                         <constraint firstItem="cRh-39-r18" firstAttribute="top" secondItem="bBh-ao-Dvb" secondAttribute="bottom" constant="8" id="3Sd-Qa-fZq"/>
-                        <constraint firstItem="cRh-39-r18" firstAttribute="leading" secondItem="NYb-8S-53x" secondAttribute="leading" constant="8" id="cNK-IL-cbj"/>
-                        <constraint firstItem="bBh-ao-Dvb" firstAttribute="leading" secondItem="NYb-8S-53x" secondAttribute="leading" constant="8" id="d36-rI-v5b"/>
-                        <constraint firstAttribute="bottom" secondItem="cRh-39-r18" secondAttribute="bottom" constant="8" id="dtI-Ov-QvM"/>
-                        <constraint firstAttribute="trailing" secondItem="bBh-ao-Dvb" secondAttribute="trailing" constant="8" id="ii6-Hg-PdN"/>
-                        <constraint firstItem="bBh-ao-Dvb" firstAttribute="top" secondItem="NYb-8S-53x" secondAttribute="top" constant="108" id="pmP-Ts-zwt"/>
+                        <constraint firstItem="cRh-39-r18" firstAttribute="leading" secondItem="NYb-8S-53x" secondAttribute="leading" constant="16" id="cNK-IL-cbj"/>
+                        <constraint firstItem="bBh-ao-Dvb" firstAttribute="leading" secondItem="NYb-8S-53x" secondAttribute="leading" constant="16" id="d36-rI-v5b"/>
+                        <constraint firstAttribute="bottom" secondItem="cRh-39-r18" secondAttribute="bottom" constant="16" id="dtI-Ov-QvM"/>
+                        <constraint firstAttribute="trailing" secondItem="bBh-ao-Dvb" secondAttribute="trailing" constant="16" id="ii6-Hg-PdN"/>
+                        <constraint firstItem="bBh-ao-Dvb" firstAttribute="top" secondItem="NYb-8S-53x" secondAttribute="top" constant="116" id="pmP-Ts-zwt"/>
                     </constraints>
                 </view>
             </subviews>
