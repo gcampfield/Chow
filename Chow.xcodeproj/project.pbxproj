@@ -12,6 +12,16 @@
 		934D1B7521222E6F00356C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934D1B7321222E6F00356C61 /* Main.storyboard */; };
 		934D1B7721222E7100356C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934D1B7621222E7100356C61 /* Assets.xcassets */; };
 		934D1B7A21222E7100356C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934D1B7821222E7100356C61 /* LaunchScreen.storyboard */; };
+		934D1B832122391B00356C61 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B822122391B00356C61 /* NibView.swift */; };
+		934D1B8621223A4900356C61 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B8521223A4900356C61 /* SwipeDirection.swift */; };
+		934D1B8821223CBD00356C61 /* SwipeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B8721223CBD00356C61 /* SwipeViewDelegate.swift */; };
+		934D1B8A21223F4A00356C61 /* CGPoint+SwipeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B8921223F4A00356C61 /* CGPoint+SwipeFunctions.swift */; };
+		934D1B8C2122420E00356C61 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B8B2122420E00356C61 /* SwipeView.swift */; };
+		934D1B8F212268AF00356C61 /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B8E212268AF00356C61 /* RestaurantView.swift */; };
+		934D1B91212268C400356C61 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B90212268C400356C61 /* Restaurant.swift */; };
+		934D1B9321226DC500356C61 /* RestaurantDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B9221226DC500356C61 /* RestaurantDeck.swift */; };
+		934D1B9521226E7100356C61 /* RestaurantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934D1B9421226E7100356C61 /* RestaurantView.xib */; };
+		934D1B9721226FC100356C61 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B9621226FC100356C61 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,16 @@
 		934D1B7621222E7100356C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		934D1B7921222E7100356C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		934D1B7B21222E7100356C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		934D1B822122391B00356C61 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		934D1B8521223A4900356C61 /* SwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
+		934D1B8721223CBD00356C61 /* SwipeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewDelegate.swift; sourceTree = "<group>"; };
+		934D1B8921223F4A00356C61 /* CGPoint+SwipeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeFunctions.swift"; sourceTree = "<group>"; };
+		934D1B8B2122420E00356C61 /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		934D1B8E212268AF00356C61 /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
+		934D1B90212268C400356C61 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		934D1B9221226DC500356C61 /* RestaurantDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDeck.swift; sourceTree = "<group>"; };
+		934D1B9421226E7100356C61 /* RestaurantView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantView.xib; sourceTree = "<group>"; };
+		934D1B9621226FC100356C61 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +74,15 @@
 		934D1B6E21222E6F00356C61 /* Chow */ = {
 			isa = PBXGroup;
 			children = (
+				934D1B7B21222E7100356C61 /* Info.plist */,
 				934D1B81212235CB00356C61 /* Supporting Files */,
+				934D1B7621222E7100356C61 /* Assets.xcassets */,
 				934D1B7121222E6F00356C61 /* ViewController.swift */,
 				934D1B7321222E6F00356C61 /* Main.storyboard */,
-				934D1B7621222E7100356C61 /* Assets.xcassets */,
+				934D1B822122391B00356C61 /* NibView.swift */,
+				934D1B9621226FC100356C61 /* GradientView.swift */,
+				934D1B8D2122688D00356C61 /* Restaurant */,
+				934D1B8421223A3500356C61 /* SwipeView */,
 			);
 			path = Chow;
 			sourceTree = "<group>";
@@ -67,9 +92,30 @@
 			children = (
 				934D1B6F21222E6F00356C61 /* AppDelegate.swift */,
 				934D1B7821222E7100356C61 /* LaunchScreen.storyboard */,
-				934D1B7B21222E7100356C61 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		934D1B8421223A3500356C61 /* SwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				934D1B8521223A4900356C61 /* SwipeDirection.swift */,
+				934D1B8B2122420E00356C61 /* SwipeView.swift */,
+				934D1B8721223CBD00356C61 /* SwipeViewDelegate.swift */,
+				934D1B8921223F4A00356C61 /* CGPoint+SwipeFunctions.swift */,
+			);
+			path = SwipeView;
+			sourceTree = "<group>";
+		};
+		934D1B8D2122688D00356C61 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				934D1B90212268C400356C61 /* Restaurant.swift */,
+				934D1B9221226DC500356C61 /* RestaurantDeck.swift */,
+				934D1B8E212268AF00356C61 /* RestaurantView.swift */,
+				934D1B9421226E7100356C61 /* RestaurantView.xib */,
+			);
+			path = Restaurant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +179,7 @@
 				934D1B7A21222E7100356C61 /* LaunchScreen.storyboard in Resources */,
 				934D1B7721222E7100356C61 /* Assets.xcassets in Resources */,
 				934D1B7521222E6F00356C61 /* Main.storyboard in Resources */,
+				934D1B9521226E7100356C61 /* RestaurantView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +191,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				934D1B7221222E6F00356C61 /* ViewController.swift in Sources */,
+				934D1B8621223A4900356C61 /* SwipeDirection.swift in Sources */,
+				934D1B9721226FC100356C61 /* GradientView.swift in Sources */,
 				934D1B7021222E6F00356C61 /* AppDelegate.swift in Sources */,
+				934D1B8F212268AF00356C61 /* RestaurantView.swift in Sources */,
+				934D1B8C2122420E00356C61 /* SwipeView.swift in Sources */,
+				934D1B8821223CBD00356C61 /* SwipeViewDelegate.swift in Sources */,
+				934D1B832122391B00356C61 /* NibView.swift in Sources */,
+				934D1B8A21223F4A00356C61 /* CGPoint+SwipeFunctions.swift in Sources */,
+				934D1B91212268C400356C61 /* Restaurant.swift in Sources */,
+				934D1B9321226DC500356C61 /* RestaurantDeck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
