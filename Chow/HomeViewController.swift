@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Chow
 //
 //  Created by Grant Campfield on 8/13/18.
@@ -8,16 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController, SwipeViewDelegate {
+class HomeViewController: UIViewController, SwipeViewDelegate {
+
+    @IBOutlet weak var currentRestaurantView: RestaurantView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // attach view controller as delegate for SwipeView
+        currentRestaurantView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - SwipeViewDelegate
+
     func didTap(view: SwipeView) {
         // TODO: segue to detail view for current restaurant
     }
@@ -26,10 +33,9 @@ class ViewController: UIViewController, SwipeViewDelegate {
         // TODO (?): handle the start of a swipe
     }
     
-    func didChangeSwipe(on view: SwipeView, with translation: CGPoint) {
+    func didChangeSwipe(on view: SwipeView, in direction: SwipeDirection?, with translation: CGPoint) {
         // TODO: move tilt logic from SwipeView to here
         // TODO: overlay meaning onto the card based on the swipe
-        let direction = SwipeDirection.closestTo(translation)
     }
     
     func didEndSwipe(on view: SwipeView, in direction: SwipeDirection?) {

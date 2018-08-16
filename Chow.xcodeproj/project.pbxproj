@@ -12,7 +12,7 @@
 		934D1B7521222E6F00356C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934D1B7321222E6F00356C61 /* Main.storyboard */; };
 		934D1B7721222E7100356C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 934D1B7621222E7100356C61 /* Assets.xcassets */; };
 		934D1B7A21222E7100356C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934D1B7821222E7100356C61 /* LaunchScreen.storyboard */; };
-		934D1B832122391B00356C61 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B822122391B00356C61 /* NibView.swift */; };
+		934D1B832122391B00356C61 /* UIView+NibFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B822122391B00356C61 /* UIView+NibFunctions.swift */; };
 		934D1B8621223A4900356C61 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B8521223A4900356C61 /* SwipeDirection.swift */; };
 		934D1B8821223CBD00356C61 /* SwipeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B8721223CBD00356C61 /* SwipeViewDelegate.swift */; };
 		934D1B8A21223F4A00356C61 /* CGPoint+SwipeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B8921223F4A00356C61 /* CGPoint+SwipeFunctions.swift */; };
@@ -32,7 +32,7 @@
 		934D1B7621222E7100356C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		934D1B7921222E7100356C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		934D1B7B21222E7100356C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		934D1B822122391B00356C61 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		934D1B822122391B00356C61 /* UIView+NibFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibFunctions.swift"; sourceTree = "<group>"; };
 		934D1B8521223A4900356C61 /* SwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
 		934D1B8721223CBD00356C61 /* SwipeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewDelegate.swift; sourceTree = "<group>"; };
 		934D1B8921223F4A00356C61 /* CGPoint+SwipeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeFunctions.swift"; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 				934D1B7621222E7100356C61 /* Assets.xcassets */,
 				934D1B7121222E6F00356C61 /* HomeViewController.swift */,
 				934D1B7321222E6F00356C61 /* Main.storyboard */,
-				934D1B822122391B00356C61 /* NibView.swift */,
+				934D1B822122391B00356C61 /* UIView+NibFunctions.swift */,
 				934D1B9621226FC100356C61 /* GradientView.swift */,
 				934D1B8D2122688D00356C61 /* Restaurant */,
 				934D1B8421223A3500356C61 /* SwipeView */,
@@ -197,7 +197,7 @@
 				934D1B8F212268AF00356C61 /* RestaurantView.swift in Sources */,
 				934D1B8C2122420E00356C61 /* SwipeView.swift in Sources */,
 				934D1B8821223CBD00356C61 /* SwipeViewDelegate.swift in Sources */,
-				934D1B832122391B00356C61 /* NibView.swift in Sources */,
+				934D1B832122391B00356C61 /* UIView+NibFunctions.swift in Sources */,
 				934D1B8A21223F4A00356C61 /* CGPoint+SwipeFunctions.swift in Sources */,
 				934D1B91212268C400356C61 /* Restaurant.swift in Sources */,
 				934D1B9321226DC500356C61 /* RestaurantDeck.swift in Sources */,

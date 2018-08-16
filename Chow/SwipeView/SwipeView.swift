@@ -15,8 +15,19 @@ class SwipeView: UIView {
     private var panGestureRecognizer: UIPanGestureRecognizer?
     private var tapGestureRecognizer: UITapGestureRecognizer?
     
-    var bufferMultiplier: CGFloat = 0.5
-    var rotationMultiplier: CGFloat = 0.25
+    var bufferMultiplier: CGFloat = 0.25
+    var bufferSize: CGFloat {
+        get {
+            return frame.width * bufferMultiplier
+        }
+    }
+
+    var rotationMultiplier: CGFloat = 4.0
+    var rotationFactor: CGFloat {
+        get {
+            return frame.width * rotationMultiplier
+        }
+    }
     
     // MARK: - Setup
     
@@ -57,15 +68,15 @@ class SwipeView: UIView {
     @objc private func panRecognized(_ sender: UIPanGestureRecognizer) {
         guard let view = sender.view else { return }
         let translation = sender.translation(in: view)
+        let direction = SwipeDirection.closestTo(translation, withBuffer: bufferSize)
         
         switch sender.state {
         case .began:
             delegate?.didBeginSwipe(on: self)
         case .changed:
             view.transform = tilt(view: view, for: translation)
-            delegate?.didChangeSwipe(on: self, with: translation)
+            delegate?.didChangeSwipe(on: self, in: direction, with: translation)
         case .ended:
-            let direction = SwipeDirection.closestTo(translation, withBuffer: view.frame.width * bufferMultiplier)
             delegate?.didEndSwipe(on: self, in: direction)
             UIView.animate(withDuration: 0.5,
                            delay: 0.0,
@@ -80,7 +91,7 @@ class SwipeView: UIView {
     
     private func tilt(view: UIView, for translation: CGPoint) -> CGAffineTransform {
         let moved = CGAffineTransform(translationX: translation.x, y: translation.y)
-        let rotation = sin(translation.x / view.frame.width * rotationMultiplier)
+        let rotation = sin(translation.x / rotationFactor)
         return moved.rotated(by: rotation)
     }
     

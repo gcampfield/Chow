@@ -18,10 +18,10 @@ enum SwipeDirection {
     
     var point: CGPoint {
         switch self {
-        case .up:    return CGPoint(x:  0, y:  1)
+        case .up:    return CGPoint(x:  0, y: -1)
         case .right: return CGPoint(x:  1, y:  0)
-        case .down:  return CGPoint(x: -1, y:  0)
-        case .left:  return CGPoint(x:  0, y: -1)
+        case .down:  return CGPoint(x:  0, y:  1)
+        case .left:  return CGPoint(x: -1, y:  0)
         }
     }
     

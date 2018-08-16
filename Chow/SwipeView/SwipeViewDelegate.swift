@@ -15,7 +15,7 @@ protocol SwipeViewDelegate: class {
     
     func didBeginSwipe(on view: SwipeView)
     
-    func didChangeSwipe(on view: SwipeView, with translation: CGPoint)
+    func didChangeSwipe(on view: SwipeView, in direction: SwipeDirection?, with translation: CGPoint)
 
     func didEndSwipe(on view: SwipeView, in direction: SwipeDirection?)
     
