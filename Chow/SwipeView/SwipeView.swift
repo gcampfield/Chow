@@ -21,13 +21,6 @@ class SwipeView: UIView {
             return frame.width * bufferMultiplier
         }
     }
-
-    var rotationMultiplier: CGFloat = 4.0
-    var rotationFactor: CGFloat {
-        get {
-            return frame.width * rotationMultiplier
-        }
-    }
     
     // MARK: - Setup
     
@@ -74,25 +67,11 @@ class SwipeView: UIView {
         case .began:
             delegate?.didBeginSwipe(on: self)
         case .changed:
-            view.transform = tilt(view: view, for: translation)
             delegate?.didChangeSwipe(on: self, in: direction, with: translation)
         case .ended:
             delegate?.didEndSwipe(on: self, in: direction)
-            UIView.animate(withDuration: 0.5,
-                           delay: 0.0,
-                           usingSpringWithDamping: 0.75,
-                           initialSpringVelocity: 1.0,
-                           options: [],
-                           animations: { view.transform = .identity },
-                           completion: nil)
         default: return
         }
-    }
-    
-    private func tilt(view: UIView, for translation: CGPoint) -> CGAffineTransform {
-        let moved = CGAffineTransform(translationX: translation.x, y: translation.y)
-        let rotation = sin(translation.x / rotationFactor)
-        return moved.rotated(by: rotation)
     }
     
     // MARK: - Tap Gesture Recognizer
