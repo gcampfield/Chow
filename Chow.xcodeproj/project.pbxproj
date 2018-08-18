@@ -22,6 +22,7 @@
 		934D1B9321226DC500356C61 /* RestaurantDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B9221226DC500356C61 /* RestaurantDeck.swift */; };
 		934D1B9521226E7100356C61 /* RestaurantView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 934D1B9421226E7100356C61 /* RestaurantView.xib */; };
 		934D1B9721226FC100356C61 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934D1B9621226FC100356C61 /* GradientView.swift */; };
+		937015222128CE1100C45080 /* RestaurantViewSwipeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937015212128CE1100C45080 /* RestaurantViewSwipeDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		934D1B9221226DC500356C61 /* RestaurantDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDeck.swift; sourceTree = "<group>"; };
 		934D1B9421226E7100356C61 /* RestaurantView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantView.xib; sourceTree = "<group>"; };
 		934D1B9621226FC100356C61 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		937015212128CE1100C45080 /* RestaurantViewSwipeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewSwipeDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				934D1B9221226DC500356C61 /* RestaurantDeck.swift */,
 				934D1B8E212268AF00356C61 /* RestaurantView.swift */,
 				934D1B9421226E7100356C61 /* RestaurantView.xib */,
+				937015212128CE1100C45080 /* RestaurantViewSwipeDelegate.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				934D1B7221222E6F00356C61 /* HomeViewController.swift in Sources */,
+				937015222128CE1100C45080 /* RestaurantViewSwipeDelegate.swift in Sources */,
 				934D1B8621223A4900356C61 /* SwipeDirection.swift in Sources */,
 				934D1B9721226FC100356C61 /* GradientView.swift in Sources */,
 				934D1B7021222E6F00356C61 /* AppDelegate.swift in Sources */,
