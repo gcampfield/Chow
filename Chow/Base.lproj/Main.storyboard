@@ -19,9 +19,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wF-Pb-e02" userLabel="Shadow Restaurant Card" customClass="RestaurantView" customModule="Chow" customModuleProvider="target">
+                                <rect key="frame" x="16" y="86" width="343" height="514.5"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-8v-qhn" userLabel="Restaurant Card" customClass="RestaurantView" customModule="Chow" customModuleProvider="target">
-                                <rect key="frame" x="16" y="86.5" width="343" height="514.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="16" y="86" width="343" height="514.5"/>
+                                <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="f9W-8v-qhn" secondAttribute="height" multiplier="4:6" id="UQE-Jd-Sac"/>
                                 </constraints>
@@ -34,19 +43,24 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="7wF-Pb-e02" firstAttribute="centerY" secondItem="f9W-8v-qhn" secondAttribute="centerY" id="8fe-we-f7d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f9W-8v-qhn" secondAttribute="trailing" constant="16" id="Au3-sP-n4T"/>
+                            <constraint firstItem="7wF-Pb-e02" firstAttribute="centerX" secondItem="f9W-8v-qhn" secondAttribute="centerX" id="FWe-0N-bhV"/>
                             <constraint firstItem="f9W-8v-qhn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="LnH-re-1dt"/>
                             <constraint firstItem="f9W-8v-qhn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Tji-SX-3Ko"/>
+                            <constraint firstItem="7wF-Pb-e02" firstAttribute="width" secondItem="f9W-8v-qhn" secondAttribute="width" id="aNg-ll-UE3"/>
+                            <constraint firstItem="7wF-Pb-e02" firstAttribute="height" secondItem="f9W-8v-qhn" secondAttribute="height" id="uJ1-e8-Zmr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="currentRestaurantView" destination="f9W-8v-qhn" id="a4K-7Q-aRw"/>
+                        <outlet property="shadowRestaurantView" destination="7wF-Pb-e02" id="3W7-Pi-4Fn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="132.26600985221674"/>
+            <point key="canvasLocation" x="-68" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>

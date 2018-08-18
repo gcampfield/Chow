@@ -10,14 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    let restaurantViewSwipeDelegate: RestaurantViewSwipeDelegate = RestaurantViewSwipeDelegate()
+    @IBOutlet weak var shadowRestaurantView: RestaurantView!
     @IBOutlet weak var currentRestaurantView: RestaurantView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // attach view controller as delegate for SwipeView
-        currentRestaurantView.delegate = restaurantViewSwipeDelegate
+        currentRestaurantView.delegate = RestaurantViewSwipeDelegate(currentRestaurantView, shadowView: shadowRestaurantView)
     }
 
     override func didReceiveMemoryWarning() {
