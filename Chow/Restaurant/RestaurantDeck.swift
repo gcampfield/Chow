@@ -20,7 +20,7 @@ class RestaurantDeck {
         restaurants = allRestaurants
     }
     
-    func next() -> Restaurant? {
+    func pop() -> Restaurant? {
         if restaurants.count == 0 {
             restaurants = allRestaurants
         }
