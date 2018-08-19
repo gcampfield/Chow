@@ -18,7 +18,6 @@ extension UIView {
         let contentView = Bundle.main.loadNibNamed(name, owner: self)!.first as! UIView
         contentView.autoresizingMask = [ .flexibleWidth, .flexibleHeight ]
         contentView.frame = bounds
-        backgroundColor = .clear
         addSubview(contentView)
     }
 
