@@ -10,16 +10,8 @@ import Foundation
 import CoreGraphics
 import UIKit
 
-class RestaurantViewSwipeDelegate: SwipeViewDelegate {
-    
-    let shadowView: UIView
+extension HomeViewController {
 
-    init(_ view: SwipeView, shadowView: UIView) {
-        self.shadowView = shadowView
-        shadowView.transform = scale(shadowView: shadowView, to: view)
-    }
-
-    var small: Bool = false
     func didTap(view: SwipeView) {
         // TODO: segue to detail view for current restaurant
     }
@@ -30,7 +22,7 @@ class RestaurantViewSwipeDelegate: SwipeViewDelegate {
     
     func didChangeSwipe(on view: SwipeView, in direction: SwipeDirection?, with translation: CGPoint) {
         view.transform = tilt(view: view, for: translation)
-        shadowView.transform = scale(shadowView: shadowView, to: view, for: translation)
+        shadowRestaurantView.transform = scale(shadowView: shadowRestaurantView, to: view, for: translation)
         
         // TODO: overlay meaning onto the card based on the swipe
     }
@@ -45,7 +37,7 @@ class RestaurantViewSwipeDelegate: SwipeViewDelegate {
                 options: [],
                 animations: {
                     view.transform = .identity
-                    self.shadowView.transform = self.scale(shadowView: self.shadowView, to: view)
+                    self.shadowRestaurantView.transform = self.scale(shadowView: self.shadowRestaurantView, to: view)
                 },
                 completion: nil)
         }
@@ -60,7 +52,7 @@ class RestaurantViewSwipeDelegate: SwipeViewDelegate {
                        animations: { view.transform = .identity },
                        completion: nil)
 
-        shadowView.transform = scale(shadowView: shadowView, to: view)
+        shadowRestaurantView.transform = scale(shadowView: shadowRestaurantView, to: view)
         
         // TODO: remove the card and move onto the next one
     }
