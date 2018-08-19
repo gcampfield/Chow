@@ -29,35 +29,44 @@ extension HomeViewController {
     
     func didEndSwipe(on view: SwipeView, in direction: SwipeDirection?) {
         guard let direction = direction else {
-            return UIView.animate(
-                withDuration: 0.5,
-                delay: 0.0,
-                usingSpringWithDamping: 0.75,
-                initialSpringVelocity: 1.0,
-                options: [],
-                animations: {
-                    view.transform = .identity
-                    self.shadowRestaurantView.transform = self.scale(shadowView: self.shadowRestaurantView, to: view)
-                },
-                completion: nil)
+            return resetViews()
         }
-        // TODO: animate the movement of the card off of the screen
-        print("ended swipe \(direction)")
-        
-        UIView.animate(withDuration: 0.5,
-                       delay: 0.0,
-                       usingSpringWithDamping: 0.75,
-                       initialSpringVelocity: 1.0,
-                       options: [],
-                       animations: { view.transform = .identity },
-                       completion: nil)
 
-        shadowRestaurantView.transform = scale(shadowView: shadowRestaurantView, to: view)
-        
-        // TODO: remove the card and move onto the next one
+        if (direction == .left || direction == .right) {
+            nextViews()
+        } else {
+            resetViews()
+        }
     }
     
     // MARK: - Helper methods
+
+    private func resetViews() {
+        return UIView.animate(
+            withDuration: 0.5,
+            delay: 0.0,
+            usingSpringWithDamping: 0.75,
+            initialSpringVelocity: 1.0,
+            options: [],
+            animations: {
+                self.currentRestaurantView.transform = .identity
+                self.shadowRestaurantView.transform = self.scale(shadowView: self.shadowRestaurantView, to: self.currentRestaurantView)
+        },
+            completion: nil)
+    }
+
+    private func nextViews() {
+        UIView.animate(
+            withDuration: 0.2,
+            animations: { self.currentRestaurantView.layer.opacity = 0.0 },
+            completion: { _ in
+                self.currentRestaurant = self.nextRestaurant
+                self.nextRestaurant = self.restaurants.pop()
+
+                self.currentRestaurantView.transform = .identity
+                self.shadowRestaurantView.transform = self.scale(shadowView: self.shadowRestaurantView, to: self.currentRestaurantView)
+            })
+    }
     
     private func tilt(view: UIView, for translation: CGPoint) -> CGAffineTransform {
         let moved = CGAffineTransform(translationX: translation.x, y: translation.y)
@@ -73,7 +82,7 @@ extension HomeViewController {
         let maxDist = view.frame.width / 4.0
         let dist = translation.distanceTo(CGPoint(x: 0, y: 0))
         let percent = min(1.0, dist / maxDist)
-        let scaleAmount = 0.9 + (percent * 0.1)
+        let scaleAmount = 0.95 + (percent * 0.05)
         return CGAffineTransform.init(scaleX: scaleAmount, y: scaleAmount)
     }
 
