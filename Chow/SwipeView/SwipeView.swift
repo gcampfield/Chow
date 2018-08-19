@@ -15,7 +15,7 @@ class SwipeView: UIView {
     private var panGestureRecognizer: UIPanGestureRecognizer?
     private var tapGestureRecognizer: UITapGestureRecognizer?
     
-    var bufferMultiplier: CGFloat = 0.25
+    var bufferMultiplier: CGFloat = 0.3
     var bufferSize: CGFloat {
         get {
             return frame.width * bufferMultiplier

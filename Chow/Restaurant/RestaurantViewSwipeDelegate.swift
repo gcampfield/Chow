@@ -18,6 +18,7 @@ extension HomeViewController {
     
     func didBeginSwipe(on view: SwipeView) {
         // TODO (?): handle the start of a swipe
+        view.layer.removeAllAnimations()
     }
     
     func didChangeSwipe(on view: SwipeView, in direction: SwipeDirection?, with translation: CGPoint) {
@@ -43,11 +44,11 @@ extension HomeViewController {
 
     private func resetViews() {
         return UIView.animate(
-            withDuration: 0.5,
+            withDuration: 0.2,
             delay: 0.0,
             usingSpringWithDamping: 0.75,
             initialSpringVelocity: 1.0,
-            options: [],
+            options: [ .allowUserInteraction ],
             animations: {
                 self.currentRestaurantView.transform = .identity
                 self.shadowRestaurantView.transform = self.scale(shadowView: self.shadowRestaurantView, to: self.currentRestaurantView)
@@ -74,14 +75,13 @@ extension HomeViewController {
         return moved.rotated(by: rotation)
     }
 
-    private func scale(shadowView: UIView, to view: UIView) -> CGAffineTransform {
+    private func scale(shadowView: UIView, to view: SwipeView) -> CGAffineTransform {
         return scale(shadowView: shadowView, to: view, for: CGPoint(x: 0.0, y: 0.0))
     }
 
-    private func scale(shadowView: UIView, to view: UIView, for translation: CGPoint) -> CGAffineTransform {
-        let maxDist = view.frame.width / 4.0
+    private func scale(shadowView: UIView, to view: SwipeView, for translation: CGPoint) -> CGAffineTransform {
         let dist = translation.distanceTo(CGPoint(x: 0, y: 0))
-        let percent = min(1.0, dist / maxDist)
+        let percent = min(1.0, dist / view.bufferSize)
         let scaleAmount = 0.95 + (percent * 0.05)
         return CGAffineTransform.init(scaleX: scaleAmount, y: scaleAmount)
     }
